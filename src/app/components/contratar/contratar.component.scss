@@ -1,0 +1,482 @@
+/* contratar.component.scss */
+
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Resetando o estilo e tornando o layout mais limpo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Fonte atualizada para Poppins */
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Imagem de fundo para a tela inteira */
+.contratar-background {
+  background-image: url('../../../assets/Banner\ para\ loja\ online\ com\ desconto\ azul\ e\ amarelo\ compra\ segura\ \(9\).png'); /* Atualize o caminho conforme necessário */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra de Navegação */
+header {
+  background-color: rgba(28, 37, 41, 0.8); /* Fundo semitransparente para melhor legibilidade */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar .logo h1 {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar .menu li a:hover {
+  color: #007BFF;
+}
+
+/* Botões Entrar e Registrar */
+.buttons {
+  display: flex;
+  gap: 10px; /* Espaço entre os botões */
+}
+
+/* Botão Registrar (Gradiente Azul com borda branca) */
+.btn-register {
+  background: linear-gradient(to right, #0885d6, #63c1ff);
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn-register:hover {
+  background: linear-gradient(to right, #63c1ff, #0885d6); /* Inverte o gradiente */
+  transform: translateY(-2px); /* Leve elevação */
+}
+
+/* Botão Entrar (Verde) */
+.btn-login {
+  background: linear-gradient(to right, #28A745, #1E7E34);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Seção Contratar */
+.contratar-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  flex: 1;
+}
+
+.contratar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo semitransparente */
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px; /* Espaço entre as colunas */
+}
+
+/* Coluna Esquerda */
+.left-column {
+  flex: 2;
+}
+
+.service-info {
+  text-align: center; /* Centraliza o texto */
+  max-width: 600px;
+  margin: 0 auto 40px auto; /* Centraliza a service-info dentro da left-column */
+}
+
+.service-info h2 {
+  font-size: 33px;
+  margin-bottom: 15px; /* Reduziu o margin */
+  color: #007BFF;
+}
+
+.service-description {
+  font-size: 21px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.service-features {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  text-align: left; /* Alinha a lista à esquerda para melhor legibilidade */
+  display: inline-block; /* Centraliza a lista dentro da service-info */
+}
+
+.service-features li {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.freelancer-info {
+  margin-top: 20px;
+}
+
+.freelancer-name {
+  font-size: 23px;
+  font-weight: 600;
+  color: #333;
+}
+
+.freelancer-rating {
+  font-size: 21px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Seção "Sobre este Serviço" */
+.about-service {
+  max-width: 800px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo semitransparente */
+  border-radius: 10px;
+  padding: 25px 20px;
+  margin-bottom: 40px; /* Espaçamento abaixo da seção */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-service h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 27px;
+}
+
+.about-service h4 {
+  font-size: 23px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.about-service p {
+  font-size: 19px;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-service ul.manifesto,
+.about-service ul.premium-details {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.about-service ul.manifesto li,
+.about-service ul.premium-details li {
+  font-size: 19px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.about-service ul.manifesto li::before,
+.about-service ul.premium-details li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
+  color: #28A745;
+}
+
+.closing-message {
+  font-size: 21px;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Coluna Direita */
+.right-column {
+  flex: 1;
+  position: sticky;
+  top: 80px; /* Espaçamento do navbar */
+}
+
+/* Parte Inferior: Menu de Pacotes */
+.packages-menu {
+  width: 100%;
+  background-color: rgba(241, 241, 241, 0.9); /* Fundo semitransparente */
+  border-radius: 10px;
+  padding: 20px 15px; /* Reduzido o padding */
+}
+
+.packages-menu h3 {
+  text-align: center;
+  margin-bottom: 15px; /* Reduzido o margin */
+  color: #333;
+  font-size: 20px; /* Reduzido o tamanho da fonte */
+}
+
+.packages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os pacotes */
+}
+
+.package {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px; /* Reduzido o padding */
+  box-sizing: border-box;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  cursor: pointer; /* Indica que é clicável */
+}
+
+.package:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.package h4 {
+  font-size: 18px; /* Reduzido o tamanho da fonte */
+  margin-bottom: 8px; /* Reduzido o margin */
+  color: #007BFF;
+}
+
+.price {
+  font-size: 20px; /* Reduzido o tamanho da fonte */
+  font-weight: bold;
+  margin-bottom: 10px; /* Reduzido o margin */
+  color: #28A745;
+}
+
+/* Seta Indicadora */
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #007BFF;
+  margin: 10px auto 0 auto;
+  transition: transform 0.3s;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Detalhes do Pacote */
+.package-details {
+  margin-top: 15px;
+}
+
+.package-features {
+  list-style-type: none;
+  text-align: left;
+  margin: 0 auto 15px auto; /* Centraliza a lista */
+  padding: 0;
+}
+
+.package-features li {
+  font-size: 14px; /* Reduzido o tamanho da fonte */
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px; /* Reduzido o padding */
+}
+
+.package-features li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
+  color: #28A745;
+}
+
+.package-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Reduzido o gap */
+}
+
+.btn-continue,
+.btn-compare {
+  width: 100%;
+  padding: 8px 0; /* Reduzido o padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-continue {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.btn-continue:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-compare {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-compare:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+/* Rodapé */
+footer {
+  background-color: rgba(28, 37, 41, 0.8); /* Fundo semitransparente */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* Ajustes para Responsividade */
+@media (max-width: 992px) {
+  .contratar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .packages-container {
+    flex-direction: column;
+  }
+
+  .packages-menu {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .packages-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .package {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar .menu {
+    display: none; /* Esconde o menu em telas muito pequenas */
+  }
+
+  .buttons {
+    gap: 5px;
+  }
+
+  .btn-register,
+  .btn-login {
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+
+  .contratar-section {
+    padding: 40px 10px;
+  }
+
+  .service-info h2 {
+    font-size: 24px;
+  }
+
+  .service-description,
+  .service-features li,
+  .freelancer-name,
+  .freelancer-rating,
+  .about-service p,
+  .about-service ul.manifesto li,
+  .about-service ul.premium-details li {
+    font-size: 14px;
+  }
+
+  .about-service {
+    padding: 15px 10px;
+  }
+
+  .package {
+    padding: 12px;
+  }
+
+  .package h4 {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .package-features li {
+    font-size: 13px;
+    padding-left: 16px;
+  }
+
+  .btn-continue,
+  .btn-compare {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+}

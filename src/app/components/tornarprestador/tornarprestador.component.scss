@@ -1,0 +1,286 @@
+/* tornarprestador.component.scss */
+
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Resetando o estilo e tornando o layout mais limpo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Imagem de fundo para a tela inteira */
+.tornarprestador-background {
+  background-image: url('../../../assets/Banner\ para\ loja\ online\ com\ desconto\ azul\ e\ amarelo\ compra\ segura\ \(9\).png'); /* Atualize o caminho conforme necessário */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra de Navegação */
+header {
+  background-color: #1c2529; /* Fundo semitransparente para melhor legibilidade */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar .logo h1 {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar .menu li a:hover {
+  color: #007BFF;
+}
+
+/* Seção Tornar Prestador */
+.tornarprestador-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  flex: 1;
+}
+
+.tornarprestador-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Progress Bar */
+.progress-bar {
+  margin-bottom: 30px;
+}
+
+.progress-bar span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #007BFF;
+  border-radius: 5px;
+  transition: width 0.3s;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.section-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.required {
+  font-size: 14px;
+  color: #ff0000;
+  margin-bottom: 15px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group input[type="file"] {
+  padding: 5px 0;
+}
+
+.form-group .error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-group .char-count {
+  font-size: 12px;
+  color: #555;
+  text-align: right;
+}
+
+/* Idiomas */
+.idiomas-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.idiomas-input input {
+  flex: 1;
+}
+
+.idiomas-input button {
+  padding: 8px 12px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.idiomas-input button:hover {
+  background-color: #0056b3;
+}
+
+.selected-idiomas {
+  margin-top: 10px;
+}
+
+.idioma {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.idioma button {
+  background: none;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Form Actions */
+.form-actions {
+  text-align: center;
+}
+
+.btn-continuar {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-continuar:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Rodapé */
+footer {
+  background-color: rgba(28, 37, 41, 0.8); /* Fundo semitransparente */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tornarprestador-container {
+    padding: 30px 20px;
+  }
+
+  .form-section h2 {
+    font-size: 20px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .btn-continuar {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .idiomas-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .idiomas-input button {
+    width: 100%;
+  }
+}

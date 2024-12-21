@@ -1,0 +1,119 @@
+<!-- contratar.component.html -->
+<router-outlet></router-outlet>
+<div class="contratar-background">
+  <!-- Barra de Navegação -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>CampusFácil</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Torne-se um prestador</a></li>
+      </ul>
+      <!-- Botões Entrar e Registrar -->
+      <div class="buttons">
+        <button class="btn-register" (click)="openRegisterModal()">Registrar</button>
+        <button class="btn-login" (click)="openLoginModal()">Entrar</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção Contratar -->
+  <section class="contratar-section">
+    <div class="contratar-container">
+      <!-- Coluna Esquerda: Informações do Serviço e Sobre este Serviço -->
+      <div class="left-column">
+        <!-- Informações do Serviço -->
+        <div class="service-info">
+          <h2>Eu vou criar um logotipo atemporal (pagina exemplo)</h2>
+          <p class="service-description">Este serviço é oferecido por um freelancer Pro</p>
+          <ul class="service-features">
+            <li>Freelancer escolhido a dedo</li>
+            <li>Trabalho de alta qualidade</li>
+            <li>Experiente em negócios</li>
+          </ul>
+          <div class="freelancer-info">
+            <p class="freelancer-name">DoidinDoidão</p>
+            <p class="freelancer-rating">Avaliação: ★★★★☆</p>
+          </div>
+        </div>
+
+        <!-- Seção "Sobre este Serviço" -->
+        <div class="about-service">
+          <h3>Sobre este Serviço</h3>
+          <p>
+            Olá! Sou designer gráfico com 5 anos de experiência em uma agência líder de logotipos com sede em Londres.
+            Como designer de logotipo e especialista em marca, vou me concentrar na criação de um logotipo atemporal
+            e líder do setor para o seu negócio. Acredito na importância dos logotipos e da marca no sucesso de uma empresa,
+            e nada me dá mais orgulho do que ver um dos meus logotipos no topo.
+          </p>
+
+          <h4>Meu Manifesto:</h4>
+          <ul class="manifesto">
+            <li>Um bom design é menos: menos é mais</li>
+            <li>Menos é Ousado: Ousado significa confiança</li>
+            <li>Ousado é experimental: experimentos envolvem riscos</li>
+            <li>O design experimental é novo: rostos novos são sempre bem-vindos</li>
+            <li>Fresh é criativo: a criatividade atrai a curiosidade</li>
+            <li>Criativo é inteligente: faça as pessoas pensarem e repensarem</li>
+            <li>Inteligente é comunicativo: comunique-se visualmente</li>
+            <li>O design comunicativo é simples: fácil de entender, mas difícil de produzir</li>
+            <li>Simples é estético: coisas atraentes funcionam melhor</li>
+            <li>A estética é boa: bom o suficiente nunca é bom o suficiente</li>
+          </ul>
+
+          <h4>Detalhes do Pacote Premium Business:</h4>
+          <ul class="premium-details">
+            <li>3 conceitos de logotipo</li>
+            <li>Arquivo de identidade corporativa com 20 páginas</li>
+            <li>Kit de mídia social</li>
+            <li>Arquivos de papelaria</li>
+            <li>Suporte VIP: Prioridade do cliente e disponível para Zoom, Skype</li>
+          </ul>
+
+          <p class="closing-message">
+            Estou realmente ansioso para trabalhar com você,<br>
+            Tudo de bom,
+          </p>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Menu de Pacotes -->
+      <div class="right-column">
+        <div class="packages-menu">
+          <h3>Escolha um Pacote</h3>
+          <div class="packages-container">
+            <div
+              class="package"
+              *ngFor="let pkg of packages; let i = index"
+              (click)="togglePackage(i)"
+              [attr.aria-expanded]="pkg.isOpen"
+              [attr.aria-controls]="pkg.name + '-details'"
+            >
+              <h4>{{ pkg.name }}</h4>
+              <p class="price">{{ pkg.price }}</p>
+              <div class="arrow" [class.rotate]="pkg.isOpen"></div>
+              <div id="{{ pkg.name }}-details" class="package-details" *ngIf="pkg.isOpen">
+                <ul class="package-features">
+                  <li *ngFor="let feature of pkg.features">{{ feature }}</li>
+                </ul>
+                <div class="package-actions">
+                  <button class="btn-continue">Continuar</button>
+                  <button class="btn-compare">Compare pacotes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 CampusFácil. Todos os direitos reservados.</p>
+  </footer>
+</div>
