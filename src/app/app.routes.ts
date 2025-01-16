@@ -4,6 +4,7 @@ import { ContratarComponent } from './components/contratar/contratar.component';
 import { HomeComponent } from './components/home/home.component';
 import { TornarPrestadorComponent } from './components/tornarprestador/tornarprestador.component';
 import { ManutencaoComponent } from './components/manutencao/manutencao.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,10 @@ export const routes: Routes = [
   {
     path: "manutencao",
     component: ManutencaoComponent
-  }
+  },
+  {
+    path: "sobre",
+    component: SobreComponent
+  },
+
 ]

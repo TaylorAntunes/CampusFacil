@@ -1,0 +1,138 @@
+/* Definindo a imagem de fundo para todo o contêiner da página */
+.sobre-container {
+  /* Definição da imagem de fundo */
+  background-image: url('../../../assets/Banner\ para\ loja\ online\ com\ desconto\ azul\ e\ amarelo\ compra\ segura\ \(9\).png'); /* Substitua pelo nome da sua imagem */
+  background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+
+  /* Configurações adicionais para posicionamento e cor do texto */
+  position: relative;
+  padding: 60px 20px; /* Adiciona padding para espaçamento interno */
+  color: #fff; /* Define a cor do texto para branco para melhor contraste */
+  min-height: 100vh; /* Garante que a página ocupe pelo menos a altura total da viewport */
+}
+
+/* Adicionando um overlay semi-transparente para melhorar a legibilidade do texto */
+.sobre-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay preto com 50% de opacidade */
+  z-index: -1; /* Posiciona o overlay atrás do conteúdo */
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+
+.missao-visao-valores {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.missao-visao-valores .item {
+  flex: 1 1 30%;
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333; /* Cor do texto escura para legibilidade */
+}
+
+.missao-visao-valores .item h2 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.equipe {
+  margin-bottom: 40px;
+}
+
+.equipe h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-members .member {
+  flex: 1 1 200px;
+  text-align: center;
+  margin: 10px;
+}
+
+.team-members .member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-members .member h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.team-members .member p {
+  color: #666;
+}
+
+.contato {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(241, 241, 241, 0.8); /* Fundo cinza claro semi-transparente */
+  border-radius: 8px;
+  color: #333; /* Cor do texto escura para legibilidade */
+}
+
+.contato a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contato a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .missao-visao-valores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .missao-visao-valores .item {
+    flex: 1 1 80%;
+  }
+
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-members .member {
+    flex: 1 1 80%;
+  }
+}
